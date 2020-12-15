@@ -1,0 +1,11 @@
+import _sqlite3
+conexao = _sqlite3.connect("IMC.db")
+
+
+cursor = conexao.cursor()
+cursor.execute("CREATE TABLE IMC(nome varchar(20) , altura float, peso float, imc float)")
+cursor.execute("INSERT INTO IMC(nome, altura, peso, imc) VALUES(?,?,?,?)",)
+
+conexao.commit()
+cursor.close()
+conexao.close()
